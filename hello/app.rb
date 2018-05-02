@@ -11,4 +11,3 @@ class HelloApi < Grape::API
         { :msg => 'Hello From Grapm API from POST request' }
         end
       end
-    end
