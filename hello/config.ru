@@ -1,4 +1,4 @@
-load '/app.rb'
+load './app.rb'
 
 run Rack::Cascade.new [
     HelloApi
