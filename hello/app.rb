@@ -13,11 +13,10 @@ class HelloApi < Grape::API
 
       resource 'hello' do
 
-        route_params :id do
+        route_param :id do
           get do
              { :msg => 'Retornando GET!', params: params[:id] }
           end
         end
-
       end
     end
