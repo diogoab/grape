@@ -22,7 +22,7 @@ class HelloApi < Grape::API
           requires :name, type: String, desc: "person name"
           requires :age, type: Integer, desc: "person age"
         end
-        route_param do
+        route_param :id do
           post do
             { :msg => 'Retornando POST!', params: params }
           end
