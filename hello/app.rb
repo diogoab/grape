@@ -18,6 +18,10 @@ class HelloApi < Grape::API
              { :msg => 'Retornando GET!', params: params[:id] }
           end
         end
+        params do
+          require :name, type: "String", desc: "person name"
+          require :age, type: "Integer", desc: "person age"
+        end
 
         post do
           { :msg => 'Retornando POST!'}
