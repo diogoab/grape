@@ -6,8 +6,11 @@ class HelloApi < Grape::API
 
       get '/' do
         { :msg => 'Hello From Grape Api' }
-        end
+      end
       post '/' do
         { :msg => 'Hello From Grapm API from POST request' }
-        end
       end
+      resource 'hello' do
+        get { :msg => 'Retornando GET!' }
+      end
+    end
