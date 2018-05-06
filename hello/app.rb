@@ -19,8 +19,8 @@ class HelloApi < Grape::API
           end
         end
         params do
-          require :name, type: "String", desc: "person name"
-          require :age, type: "Integer", desc: "person age"
+          requires :name, type: String, desc: "person name"
+          requires :age, type: Integer, desc: "person age"
         end
 
         post do
