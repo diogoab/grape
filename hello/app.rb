@@ -11,7 +11,7 @@ class HelloApi < Grape::API
         { :msg => 'Hello From Grapm API from POST request' }
       end
       resource 'hello' do
-        route_params :id do
+        route_param :id do
           get do
              { :msg => 'Retornando GET!', parmas: params[:id] }
           end
