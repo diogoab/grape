@@ -18,5 +18,9 @@ class HelloApi < Grape::API
              { :msg => 'Retornando GET!', params: params[:id] }
           end
         end
+
+        post do
+          { :msg => 'Retornando POST!'}
+        end
       end
     end
