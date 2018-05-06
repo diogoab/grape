@@ -7,7 +7,7 @@ class HelloApi < Grape::API
       get '/' do
         { :msg => 'Hello From Grape Api' }
       end
-      post '/' do
+      post '/post' do
         { :msg => 'Hello From Grapm API from POST request' }
       end
 
@@ -18,6 +18,8 @@ class HelloApi < Grape::API
              { :msg => 'Retornando GET!', params: params[:id] }
           end
         end
+
+        desc 'Retorno do POST com parametros NAME e AGE'
         params do
           requires :name, type: String, desc: "person name"
           requires :age, type: Integer, desc: "person age"
@@ -27,6 +29,5 @@ class HelloApi < Grape::API
             { :msg => 'Retornando POST!', params: params }
           end
         end
-
       end
     end
